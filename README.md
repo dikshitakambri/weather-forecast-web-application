@@ -18,4 +18,4 @@
 <h4>API Used</h4>
 <li><a href="https://openweathermap.org">Openweathermap</a></li>
 
-<img src="public/Images/output.png" alt="output">
+<img src="public/Images/output.png" alt="output" width="50%">
