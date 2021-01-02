@@ -1,0 +1,21 @@
+body{
+    background-image: url("../Images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: 'Cabin', sans-serif;
+}
+.container {
+    padding: 200px 20px 50px;
+}
+
+input{
+    width: 10%;
+    border: 2px solid black;
+    border-radius: 4px;
+    transition: width 0.4s ease-in-out;
+}
+
+
+label{
+    font-size: 30px;
+}
