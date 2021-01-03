@@ -6,6 +6,8 @@ const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+app.set("view engine", 'ejs');
+
 app.get("/", function(req, res) {
     res.sendFile(__dirname + "/index.html");
 });
@@ -20,25 +22,27 @@ app.post("/", function(req, res) {
 
         response.on("data", function(data) {
             const weatherData = JSON.parse(data)
-            const temp = weatherData.main.temp
+            var temp = weatherData.main.temp
             const weatherdescription = weatherData.weather[0].description
             const pressure = weatherData.main.pressure
             const humidity = weatherData.main.humidity
             const wind = weatherData.wind.speed
             const icon = weatherData.weather[0].icon
             const imageURL = "https://openweathermap.org/img/wn/" + icon + "@2x.png";
-            res.write("<h1>Temperature of " + City +" is " + temp + " degree celcius</h1>");
-            res.write("<p>Weather of " + City+" is " + weatherdescription + "</p>");
-            res.write("<p>Pressure:" + pressure + "</>");
-            res.write("<p>Humidity:" + humidity + "</>");
-            res.write("<p>Wind speed is " + wind + "</>");
-            res.write("<img src=" + imageURL +">");
-            res.send();
+            // res.write("<img src=" + imageURL +">");
+            res.render("weather",{
+                City: City,
+                temp: temp,
+                weatherdescription: weatherdescription,
+                pressure: pressure,
+                humidity: humidity,
+                wind: wind,
+                icon:icon
+            });
         })
     });
 });
 
-    
-app.listen(3000, function() {
-    console.log("Server is running on port 3000.");
+app.listen(3000, function(){
+    console.log("Server running on 3000 port");
 });
