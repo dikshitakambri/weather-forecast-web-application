@@ -22,5 +22,5 @@
 
 <span>
     <img src="public/Images/output.png" alt="output" width="50%">
-    <img src="public/Images/output2.JPG" alt="output" width="50%">
+    <img src="public/Images/final-output.JPG" alt="output" width="50%">
 </span>
