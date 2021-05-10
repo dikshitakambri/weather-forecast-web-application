@@ -24,3 +24,7 @@
     <img src="public/Images/output.png" alt="output" width="50%">
     <img src="public/Images/final-output.JPG" alt="output" width="50%">
 </span>
+
+<br>
+
+[![Github All Releases](https://img.shields.io/github/downloads/dikshitakambri/weather-forecast-web-application/total.svg)]()
